@@ -146,6 +146,7 @@ class Game extends React.Component {
             stepNumber: step,
             xIsNext: (step % 2) === 0,
             selected: step,
+            line: []
         })
     }
 
@@ -206,7 +207,7 @@ class Game extends React.Component {
                 <div className="game-info">
                     <div>{status}</div>
                     <div className='btn'>
-                        <button onClick={() => this.changeSort()}>{this.state.isAscending? 'Sort to DESC' : 'Sort to ASC'}</button>
+                        <button onClick={() => this.changeSort()}>{this.state.isAscending? 'Sort ↓' : 'Sort ↑'}</button>
                     </div>
                     <ol>{this.state.isAscending? moves : moves.reverse()}</ol>
                 </div>
